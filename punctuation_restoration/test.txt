@@ -1,5 +1,5 @@
 Absolutely	0
-not!	0
+not	0
  In	0
 fact	1
 most	0
@@ -21,7 +21,6 @@ go	0
 hand	0
 in	0
 hand	0
-(	0
 in	0
 "therapy	0
 speak"	0
@@ -29,7 +28,7 @@ we	0
 call	0
 it	0
 co-morbid	0
-conditions)I	0
+conditions	0
 would	0
 venture	0
 that	0

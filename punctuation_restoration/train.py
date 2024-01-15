@@ -14,7 +14,7 @@ from pytorch_pretrained_bert import BertTokenizer
 from pytorch_pretrained_bert.optimization import BertAdam
 #  warmup_linear
 
-from sklearn import metrics # https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
+from sklearn import metrics 
 from sklearn.exceptions import UndefinedMetricWarning
 import warnings
 warnings.filterwarnings("ignore", category=UndefinedMetricWarning)
@@ -150,12 +150,6 @@ if __name__ == '__main__':
         'PERIOD': 2,
         'QUESTION': 3
     }
-
-    # punctuation_enc = {
-    #     'O': 0,
-    #     'PERIOD': 1,
-    # }
-
     segment_size = 32
     dropout = 0.3
     epochs_top = 1
@@ -184,10 +178,6 @@ if __name__ == '__main__':
         json.dump(hyperparameters, f)
 
     print('LOADING DATA...')
-    # data_train = load_file('data/LREC/train2012')
-    # data_valid = load_file('data/LREC/dev2012')
-    # data_test = load_file('data/LREC/test2011')
-    # data_test_asr = load_file('data/LREC/test2011asr')
     data_train = load_file('train.txt')
     data_valid = load_file('dev.txt')
     data_test = load_file('test.txt')
@@ -221,3 +211,5 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
     bert_punc, optimizer, best_val_loss = train(bert_punc, optimizer, criterion, epochs_all, 
         data_loader_train, data_loader_valid, save_path, punctuation_enc, iterations_all, best_val_loss=best_val_loss)
+
+    
